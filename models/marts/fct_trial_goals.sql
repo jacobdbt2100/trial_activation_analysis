@@ -184,4 +184,31 @@ final AS (
 
 )
 
-SELECT * FROM final
+SELECT
+    organization_id,
+    converted,
+    converted_at,
+    trial_start,
+    trial_end,
+
+    shifts_created,
+    goal_1_core_scheduling,
+
+    templates_applied,
+    shifts_approved,
+    goal_2_schedule_management,
+
+    mobile_schedule_loads,
+    goal_3_mobile_visibility,
+
+    punch_ins,
+    goal_4_time_tracking,
+
+    week1_unique_activity_count,
+    goal_5_early_activity_breadth,
+
+    goals_completed_count,
+
+    updated_at
+
+FROM final
