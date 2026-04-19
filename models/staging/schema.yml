@@ -1,0 +1,74 @@
+version: 2
+
+sources:
+  - name: raw_trial_events
+    description: Raw behavioural event data from Splendor Analytics trial
+    database: trial_to_conversion_analytics_dev
+    schema: source_schema_trial_to_conversion_dev
+    tables:
+      - name: trial_events
+        description: >
+          One row per product event. Contains 170,526 rows across 966 trial
+          organisations (Jan-Mar 2024). 67,631 exact duplicates are removed in staging.
+        columns:
+          - name: ORGANIZATION_ID
+            description: Unique identifier for each trial organisation
+            data_tests: [not_null]
+          - name: ACTIVITY_NAME
+            description: Name of the product activity performed
+            data_tests: [not_null]
+          - name: TIMESTAMP
+            description: When the activity occurred
+            data_tests: [not_null]
+          - name: CONVERTED
+            description: Whether the organisation converted to paid
+            data_tests:
+              - not_null
+              - accepted_values:
+                  values: [true, false]
+          - name: CONVERTED_AT
+            description: Timestamp of conversion — null if not converted
+          - name: TRIAL_START
+            description: When the trial started
+            data_tests: [not_null]
+          - name: TRIAL_END
+            description: Trial expiry date (trial_start + 30 days)
+            data_tests: [not_null]
+
+models:
+  - name: stg_trial_events
+    description: >
+      Cleaned and enriched trial events. Deduplicates on
+      (organization_id, activity_name, event_timestamp), casts all fields,
+      derives activity_module and days_since_trial_start.
+      Grain: one row per unique event.
+    columns:
+      - name: organization_id
+        description: Unique organisation identifier
+        data_tests: [not_null]
+      - name: activity_name
+        description: Product activity name
+        data_tests: [not_null]
+      - name: activity_module
+        description: Top-level module extracted from dot-notation activity name
+        data_tests: [not_null]
+      - name: event_timestamp
+        description: Parsed datetime of the event
+        data_tests: [not_null]
+      - name: converted
+        description: Boolean conversion flag
+        data_tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+      - name: converted_at
+        description: Timestamp of conversion — null if not converted
+      - name: trial_start
+        description: When the trial started
+        data_tests: [not_null]
+      - name: trial_end
+        description: Trial expiry date (trial_start + 30 days)
+        data_tests: [not_null]
+      - name: days_since_trial_start
+        description: Number of days between trial_start and event_timestamp
+        data_tests: [not_null]
