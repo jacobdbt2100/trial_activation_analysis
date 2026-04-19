@@ -1,0 +1,100 @@
+version: 2
+
+models:
+  - name: fct_trial_goals
+    description: >
+      Mart table tracking goal completion per organisation.
+      Grain: one row per organization_id.
+      Exposes raw metric counts alongside boolean goal flags so downstream
+      consumers can adjust thresholds without rewriting SQL.
+      Built on top of stg_trial_events.
+    columns:
+      - name: organization_id
+        description: Unique org identifier — primary key
+        data_tests: [not_null, unique]
+      - name: converted
+        description: Whether the org converted to paid
+        data_tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+      - name: shifts_created
+        description: Total number of shifts created during the trial
+        data_tests:
+          - not_null
+          - dbt_utils.accepted_range:
+              min_value: 0
+      - name: goal_1_core_scheduling
+        description: True if organisation created >= 5 shifts
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+      - name: goal_2_schedule_management
+        description: True if organisation applied >= 1 template OR approved >= 1 shift
+        data_tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+      - name: goal_3_mobile_visibility
+        description: True if organisation loaded mobile schedule >= 3 times
+        data_tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+      - name: goal_4_time_tracking
+        description: True if organisation recorded >= 1 punch-in
+        data_tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+      - name: goal_5_early_activity_breadth
+        description: >
+          True if organisation had >= 3 unique activity count in the first 7 days
+          of trial
+        data_tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+      - name: goals_completed_count
+        description: Number of goals completed (0-5)
+        data_tests:
+          - not_null
+          - accepted_values:
+              values: [0, 1, 2, 3, 4, 5]
+      - name: updated_at
+        description: Timestamp of last model run
+        data_tests: [not_null]
+
+
+  - name: fct_trial_activation
+    description: >
+      Mart table flagging which organisations have achieved Trial Activation
+      (completed all 5 goals). Grain: one row per organization_id.
+      Built on top of fct_trial_goals — adds no new aggregation, only
+      classification logic (activation flag, tier, days-to-convert).
+    columns:
+      - name: organization_id
+        description: Unique org identifier — primary key
+        tests: [not_null, unique]
+      - name: is_activated
+        description: True if organisation completed all 5 trial goals
+        data_tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+      - name: activation_tier
+        description: Segmentation tier based on goals completed count
+        data_tests:
+          - not_null
+          - accepted_values:
+              values: ['Fully Activated', 'Partially Activated', 'Early Engaged', 'Dormant']
+      - name: goals_completed_count
+        description: Number of goals completed (0-5)
+        data_tests:
+          - not_null
+          - accepted_values:
+              values: [0, 1, 2, 3, 4, 5]
+      - name: updated_at
+        description: Timestamp of last model run
+        data_tests: [not_null]
