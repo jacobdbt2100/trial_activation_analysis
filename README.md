@@ -28,10 +28,10 @@ This project answers:
 
 Activation is defined as completing:
 
-- Core Scheduling Setup
+- Core Scheduling
 - Schedule Management
 - Mobile Visibility
-- Time Tracking Usage
+- Time Tracking
 - Early Activity (Feature) Breadth
 
 These behaviours were selected using:
@@ -51,16 +51,13 @@ Activation is treated as a **product hypothesis**, not a guaranteed conversion d
 
 Each goal represents a milestone toward activation. **Trial Activation = Completion of all goals**.
 
-| # | Goal                          | Description                      | Completion Rate                 | Conversion Rate if Completed  | Lift Ratio | 
-| - | ----------------------------- | -------------------------------- | ------------------------------- | ----------------------------- | ---------- | 
-| 1 | Goal 1 — Core Scheduling      | Organisation sets up schedules   | Shift Created, Template Applied |             |                      |
-| 2 | Goal 2 — Schedule Management  | Staff interaction with schedules | Shift Swap, Assignment Changes  | | |
-| 3 | Goal 3 — Workforce Visibility | Schedule visibility across users | Schedule Loaded                 | | |
-| 4 | Goal 4 — Time Tracking        | Active time logging              | Punch In / Out                  | | |
-| 5 | Goal 5 — Workflow Breadth     | Multi-feature usage              | Messaging, Absence, Payroll     | | |
-
-
-
+| # | Goal                   | Description                                      | Completion Rate | Conversion Rate if Completed  | Lift Ratio |
+| - | ---------------------- | ------------------------------------------------ | --------------- | ----------------------------- | ---------- |
+| 1 | Core Scheduling        | Created ≥ 5 shifts                               | 46.6%           | 21.8%                         | 1.02       |
+| 2 | Schedule Management    | Applied ≥ 1 shift template OR approved ≥ 1 shift | 25.6%           | 22.7%                         | 1.06       |
+| 3 | Mobile Visibility      | Loaded mobile schedule ≥ 3 times                 | 36.0%           | 22.1%                         | 1.04       |
+| 4 | Time Tracking          | Recorded ≥ 1 punch-in                            | 21.8%           | 22.8%                         | 1.07       |
+| 5 | Early Activity Breadth | ≥ 3 different features in first 7 days of trial  | 28.3%           | 22.3%                         | 1.05       |
 
 ### 4. SQL Models
 ### 5. Descriptive Product Metrics
