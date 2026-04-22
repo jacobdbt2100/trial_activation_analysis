@@ -73,7 +73,7 @@ Each goal represents a milestone toward activation. **Trial Activation = Complet
 
 
 ## Tools Used
-Python | pandas | matplotlib | seaborn | SQL | dbt | Jupyter Notebook | Git/GitHub | VSCode
+Python | pandas | matplotlib | seaborn | SQL | dbt | Jupyter Notebook | Git/GitHub | VS Code
 
 ## Author
 
