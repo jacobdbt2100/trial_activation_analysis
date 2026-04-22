@@ -47,7 +47,21 @@ Activation is treated as a **product hypothesis**, not a guaranteed conversion d
 
 ### 1. Data Cleaning & Exploration
 ### 2. Conversion Driver Analysis
-### 3. Trial Goal Definition
+### 3. Trial Goals Defined
+
+Each goal represents a milestone toward activation. **Trial Activation = Completion of all goals**.
+
+| Goal                          | Description                      | Example Activities              |
+| ----------------------------- | -------------------------------- | ------------------------------- |
+| Goal 1 — Core Scheduling      | Organisation sets up schedules   | Shift Created, Template Applied |
+| Goal 2 — Schedule Management  | Staff interaction with schedules | Shift Swap, Assignment Changes  |
+| Goal 3 — Workforce Visibility | Schedule visibility across users | Schedule Loaded                 |
+| Goal 4 — Time Tracking        | Active time logging              | Punch In / Out                  |
+| Goal 5 — Workflow Breadth     | Multi-feature usage              | Messaging, Absence, Payroll     |
+
+
+
+
 ### 4. SQL Models
 ### 5. Descriptive Product Metrics
 ### 6. Repo Structure
