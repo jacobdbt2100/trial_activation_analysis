@@ -51,13 +51,13 @@ Activation is treated as a **product hypothesis**, not a guaranteed conversion d
 
 Each goal represents a milestone toward activation. **Trial Activation = Completion of all goals**.
 
-| Goal                          | Description                      | Example Activities              |
-| ----------------------------- | -------------------------------- | ------------------------------- |
-| Goal 1 — Core Scheduling      | Organisation sets up schedules   | Shift Created, Template Applied |
-| Goal 2 — Schedule Management  | Staff interaction with schedules | Shift Swap, Assignment Changes  |
-| Goal 3 — Workforce Visibility | Schedule visibility across users | Schedule Loaded                 |
-| Goal 4 — Time Tracking        | Active time logging              | Punch In / Out                  |
-| Goal 5 — Workflow Breadth     | Multi-feature usage              | Messaging, Absence, Payroll     |
+| # | Goal                          | Description                      | Completion Rate                 | Conversion Rate if Completed  | Lift Ratio | 
+| - | ----------------------------- | -------------------------------- | ------------------------------- | ----------------------------- | ---------- | 
+| 1 | Goal 1 — Core Scheduling      | Organisation sets up schedules   | Shift Created, Template Applied |             |                      |
+| 2 | Goal 2 — Schedule Management  | Staff interaction with schedules | Shift Swap, Assignment Changes  | | |
+| 3 | Goal 3 — Workforce Visibility | Schedule visibility across users | Schedule Loaded                 | | |
+| 4 | Goal 4 — Time Tracking        | Active time logging              | Punch In / Out                  | | |
+| 5 | Goal 5 — Workflow Breadth     | Multi-feature usage              | Messaging, Absence, Payroll     | | |
 
 
 
