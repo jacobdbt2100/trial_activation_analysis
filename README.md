@@ -63,15 +63,15 @@ Trial goals are treated as **product hypotheses**, not guaranteed conversion dri
 
 The raw data consist of a single table with seven attributes and 170,526 trial events that includes duplicates;
 
-| Attribute       | Description                                  |
-|-----------------|----------------------------------------------|
-| ORGANIZATION_ID | Unique identifier for each trial organisation                                             |
-| ACTIVITY_NAME   | Name of the product activity performed                                             |
-| TIMESTAMP       | When the activity occurred                                             |
-| CONVERTED       | Whether the organisation converted to paid                                             |
-| CONVERTED_AT    | Timestamp of conversion — null if not converted                                             |
-| TRIAL_START     | When the trial started                                             |
-| TRIAL_END       | Trial expiry date (trial_start + 30 days)                                             |
+| Attribute       | Description                                      |
+|-----------------|--------------------------------------------------|
+| ORGANIZATION_ID | Unique identifier for each trial organisation    |
+| ACTIVITY_NAME   | Name of the product activity performed           |
+| TIMESTAMP       | When the activity occurred                       |
+| CONVERTED       | Whether the organisation converted to paid       |
+| CONVERTED_AT    | Timestamp of conversion — null if not converted  |
+| TRIAL_START     | When the trial started                           |
+| TRIAL_END       | Trial expiry date (trial_start + 30 days)        |
 
 ## Methodology
 
@@ -84,7 +84,7 @@ The raw data consist of a single table with seven attributes and 170,526 trial e
 - Activities Adoption Rate: Activites within the **Scheduling** module are most commonly adopted with 6 out of the top 10.
 - Activities Usage Volume: The **Scheduling** module still tops with 5 out of the top 10 total usage count.
 
-<img src="https://raw.githubusercontent.com/jacobdbt2100/trial_activation_analysis/main/01_data_cleaning_and_exploration_output.png" width="400">
+<img src="https://raw.githubusercontent.com/jacobdbt2100/trial_activation_analysis/main/notebooks/01_data_cleaning_and_exploration_output.png" width="400">
 
 ### 2. Conversion Driver Analysis
 ### 3. Trial Goals Defined
