@@ -46,24 +46,20 @@ Trial goals are treated as **product hypotheses**, not guaranteed conversion dri
 ## Key Findings
 
 ### 1. Conversion
-
-- 21.3% overall conversion rate
-- Median conversion happens at day 30 - the end of the trial period
-- 0% of orgs convert by day 7; only 48.1% of converters have converted by day 30
+- Overall conversion rate: **21.3%** (206 / 966 organisations converted)
+- Median of **days from trial start to conversion**: **30 days**. This corresponds to the end of the trial period.
+- Conversions by day 30: **99** out of 206 total conversions (**48.1%**)
 
 ### 2. Engagement
-- Converters and non-converters show identical median engagement: 8 events, 2 unique activities, 1 active day
-- Scheduling is the dominant module (88.2% adoption); all other modules used by fewer than 50% of orgs
-- 81% of orgs are effectively dormant — 785 orgs with median 5 events across their entire trial
+- Converters and non-converters show identical median engagement: 8 events, 2 unique activities, 1 active day. This indicates **Engagement** alone does not predict conversion.
 
 ### 3. Monthly Cohorts
-- Jan–Mar 2024 cohorts (23.0%, 22.8%, 18.2%)
+- Jan–Mar 2024 cohorts conversion rates: (**23.0%, 22.8%, 18.2%**). There's an obvious decline in conversion for the March 2024 cohort.
 
-### 4. Feature Usage
+### 4. Module Usage
+- Scheduling is the dominant module (88.2% adoption); all other modules used by fewer than 50% of organisations.
 
-## Methodology
-
-### 1. Data Description
+## Data Description
 
 The raw data consist of a single table with seven attributes and 170,526 trial events that includes duplicates;
 
@@ -77,14 +73,21 @@ The raw data consist of a single table with seven attributes and 170,526 trial e
 | TRIAL_START     | When the trial started                                             |
 | TRIAL_END       | Trial expiry date (trial_start + 30 days)                                             |
 
-### 2. Data Cleaning & Exploration
-170,526 raw events → 102,895 after deduplication (67,631 exact duplicates removed)
-966 organisations | 28 distinct activity types
-Trial period: January–March 2024 (30-day trials)
-Conversion rate: 21.3% (206 / 966 organisations)
+## Methodology
 
-### 3. Conversion Driver Analysis
-### 4. Trial Goals Defined
+### 1. Data Cleaning & Exploration
+- Raw events: **170,526**
+- After deduplication: **102,895** (**67,631** exact duplicates removed)
+- Distinct organisations: **966**
+- Distinct activity types: **28**
+- Engagement distribution patterns: Derived engagement fields (total events, unique activities, active days) show **identical distribution patterns** for **converted and non-converted**.
+- Activities Adoption Rate: Activites within the **Scheduling** module are most commonly adopted with 6 out of the top 10.
+- Activities Usage Volume: The **Scheduling** module still tops with 5 out of the top 10 total usage count.
+
+<img src="https://raw.githubusercontent.com/jacobdbt2100/trial_activation_analysis/main/01_data_cleaning_and_exploration_output.png" width="400">
+
+### 2. Conversion Driver Analysis
+### 3. Trial Goals Defined
 
 Each goal represents a milestone toward activation. **Trial Activation = Completion of all goals**.
 
@@ -96,9 +99,9 @@ Each goal represents a milestone toward activation. **Trial Activation = Complet
 | 4 | Time Tracking          | Recorded ≥ 1 punch-in                            | 21.8%           | 22.8%                         | 1.07       |
 | 5 | Early Activity Breadth | ≥ 3 different features in first 7 days of trial  | 28.3%           | 22.3%                         | 1.05       |
 
-### 5. SQL Models
-### 6. Descriptive Product Metrics
-### 7. Repo Structure
+### 4. SQL Models
+### 5. Descriptive Product Metrics
+### 6. Repo Structure
 
 
 ## Recommendations
