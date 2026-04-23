@@ -84,7 +84,7 @@ The raw data consist of a single table with seven attributes and 170,526 trial e
 - Activities Adoption Rate: Activites within the **Scheduling** module are most commonly adopted with 6 out of the top 10.
 - Activities Usage Volume: The **Scheduling** module still tops with 5 out of the top 10 total usage count.
 
-#### Data Exploration Output:
+#### Fig. 1: Data Exploration Output;
 <img src="https://raw.githubusercontent.com/jacobdbt2100/trial_activation_analysis/main/notebooks/01_data_cleaning_and_exploration_output.png" width="1000">
 
 ### 2. Conversion Driver Analysis
