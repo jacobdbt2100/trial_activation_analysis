@@ -80,6 +80,8 @@ The raw data consist of a single table with seven attributes and 170,526 trial e
 - After deduplication: **102,895** (**67,631** exact duplicates removed)
 - Distinct organisations: **966**
 - Distinct activity types: **28**
+- Overall conversion rate: **21.3%** (206 / 966 organisations converted)
+- Median of **days from trial start to conversion**: **30 days**. This corresponds to the end of the trial period.
 - Engagement distribution patterns: Derived engagement fields (total events, unique activities, active days) show **identical distribution patterns** for **converted and non-converted**.
 - Activities Adoption Rate: Activites within the **Scheduling** module are most commonly adopted with **6 out of the top 10**.
 - Activities Usage Volume: The **Scheduling** module still tops with **5 out of the top 10** total usage count.
