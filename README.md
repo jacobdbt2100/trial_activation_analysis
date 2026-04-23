@@ -81,8 +81,8 @@ The raw data consist of a single table with seven attributes and 170,526 trial e
 - Distinct organisations: **966**
 - Distinct activity types: **28**
 - Engagement distribution patterns: Derived engagement fields (total events, unique activities, active days) show **identical distribution patterns** for **converted and non-converted**.
-- Activities Adoption Rate: Activites within the **Scheduling** module are most commonly adopted with 6 out of the top 10.
-- Activities Usage Volume: The **Scheduling** module still tops with 5 out of the top 10 total usage count.
+- Activities Adoption Rate: Activites within the **Scheduling** module are most commonly adopted with **6 out of the top 10**.
+- Activities Usage Volume: The **Scheduling** module still tops with **5 out of the top 10** total usage count.
 
 #### Fig. 1: Data Exploration Output
 <img src="https://raw.githubusercontent.com/jacobdbt2100/trial_activation_analysis/main/notebooks/01_data_cleaning_and_exploration_output.png" width="1000">
