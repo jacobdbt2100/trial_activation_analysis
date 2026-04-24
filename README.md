@@ -268,5 +268,6 @@ Python | pandas | matplotlib | seaborn | SQL | dbt | Jupyter Notebook | Git/GitH
 
 Data Analyst - Product & Behaviour Analytics
 
-- [GitHub](https://github.com/jacobdbt2100/Data-Analytics-Projects/blob/main/README.md)
+- [X(Twitter)](https://x.com/jacobdbt2100_2)
 - [LinkedIn](https://www.linkedin.com/in/jacobjoshua675/)
+- [GitHub](https://github.com/jacobdbt2100/Data-Analytics-Projects/blob/main/README.md)
