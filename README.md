@@ -150,7 +150,7 @@ These metrics help teams monitor:
 ### 6. Repository Structure
 
 ```text
-trial_activation_analysis/
+**trial_activation_analysis**/
 │
 ├── dataset/
 │   ├── exports/
