@@ -2,6 +2,8 @@
 Product Analytics | Python | SQL | dbt
 ___
 
+## Project Objective
+
 This project defines **Trial Activation** for a workforce management SaaS product by identifying behaviours that signal product value and predicting conversion likelihood.
 
 The goal is to help product teams understand:
@@ -10,8 +12,6 @@ The goal is to help product teams understand:
 - Which behaviours signal **high conversion potential**
 - When to **intervene during onboarding**
 - How to track activation at scale using **warehouse models**
-
-## Project Objective
 
 Trial users complete many activities, but not all behaviours drive conversion.
 
