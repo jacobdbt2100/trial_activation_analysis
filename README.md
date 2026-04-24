@@ -47,7 +47,7 @@ Trial goals are treated as **product hypotheses**, not guaranteed conversion dri
 
 ### 1. Conversion
 - Overall conversion rate: **21.3%** (206 / 966 organisations converted)
-- Median of **days from trial start to conversion**: **30 days**. This corresponds to the end of the trial period.
+- Median of **days from trial start to conversion**: **30 days**. Conversions occur late - at trial expiry.
 - Conversions by day 30: **99** out of 206 total conversions (**48.1%**)
 
 ### 2. Engagement
@@ -59,7 +59,7 @@ Trial goals are treated as **product hypotheses**, not guaranteed conversion dri
 ### 4. Module Usage
 - Scheduling is the dominant module (88.2% adoption); all other modules used by fewer than 50% of organisations.
 
-## Data Description
+## Source Data Description
 
 The raw data consist of a single table with seven attributes and 170,526 trial events that includes duplicates;
 
@@ -92,6 +92,23 @@ The raw data consist of a single table with seven attributes and 170,526 trial e
 
 ### 2. Conversion Driver Analysis
 
+#### Analytical Methods Used
+
+Multiple methods were applied to identify behavioural drivers:
+
+- Exploratory Data Analysis (EDA)
+- Event frequency comparison
+- Conversion rate segmentation
+- Chi-square statistical test
+- Mann–Whitney U test
+- Logistic regression modelling
+- Feature importance analysis
+
+This combination ensures both:
+
+- Statistical validity
+- Practical interpretability
+
 #### [Fig. 2: Conversion Driver Analysis Output](https://github.com/jacobdbt2100/trial_activation_analysis/blob/main/notebooks/02_conversion_driver_analysis_output.png)
 
 <img src="https://raw.githubusercontent.com/jacobdbt2100/trial_activation_analysis/main/notebooks/02_conversion_driver_analysis_output.png" width="900">
@@ -111,18 +128,97 @@ Each goal represents a milestone toward activation. **Trial Activation = Complet
 ### 4. SQL Models
 ### 5. Descriptive Product Metrics
 
+Derived metrics include:
+
+- Overall Conversion Rate
+- Days to Activation & Conversion
+- Goal Completion Rates
+- Goals Completed & Conversion Rate
+- Conversion Rate by Cohort Month
+- Module Adoption Rate
+
+These metrics help teams monitor:
+
+- Trial health
+- Feature effectiveness
+- Onboarding performance
+
 #### [Fig. 3: Product Metrics Output](https://github.com/jacobdbt2100/trial_activation_analysis/blob/main/notebooks/03_descriptive_analysis_and_product_metrics_output.png)
 
 <img src="https://raw.githubusercontent.com/jacobdbt2100/trial_activation_analysis/main/notebooks/03_descriptive_analysis_and_product_metrics_output.png" width="1000">
 
-### 6. Repo Structure
+### 6. Repository Structure
 
+trial_activation_analysis/
+│
+├── dataset/
+│   ├── exports/
+│   │  ├── df_activity_pivot_flag.csv
+│   │  ├── df_organization.csv
+│   │  ├── df_organization_act_count.csv
+│   │  ├── df_organization_act_flag.csv
+│   │  ├── df_trial.csv
+│   │  ├── fct_trial_activation.csv
+│   │  └── stg_trial_events.csv
+│   │ 
+│   └── snippet_data/
+│      └── trial_events.csv
+│
+├── models/
+│   ├── marts/
+│   │   ├── fct_trial_activation.sql            # mart: activation flag per organisation
+│   │   ├── fct_trial_goals.sql                 # mart: goal completion per organisation
+│   │   └── marts_schema.yml                    # dbt mart models tests
+│   │
+│   └── staging/
+│       ├── stg_trial_events.sql                # staging: cast, dedup, enrich raw events
+│       └── staging_schema.yml                  # dbt source + staging models tests
+│
+├── notebooks/
+│   ├── 01_data_cleaning_and_exploration.ipynb
+│   ├── 01_data_cleaning_and_exploration_output.png
+│   ├── 02_conversion_driver_analysis.ipynb
+│   ├── 02_conversion_driver_analysis_output.png
+│   ├── 03_descriptive_analysis_and_product_metrics.ipynb
+│   └── 03_descriptive_analysis_and_product_metrics_output.png
+│
+├── .gitignore
+├── README.md
+├── dbt_project.yml
+└── requirements.txt
 
 ## Recommendations
 
 
 ## How to Run This Project
 
+### 1. Clone Repository
+
+```powershell
+git clone https://github.com/jacobdbt2100/trial_activation_analysis.git
+cd trial_activation_analysis
+```
+### 2. Install Dependencies
+
+```powershell
+pip install -r requirements.txt
+```
+
+### 3. Run dbt Models
+
+```powershell
+dbt run
+```
+
+### 4. Run Tests
+
+```powershell
+dbt test
+```
+
+### 5. Open Notebooks
+
+Run notebooks to reproduce analysis and visuals.
 
 ## Tools Used
 Python | pandas | matplotlib | seaborn | SQL | dbt | Jupyter Notebook | Git/GitHub | VS Code
