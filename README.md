@@ -4,41 +4,25 @@ ___
 
 ## Project Objective
 
-This project defines **Trial Activation** for a workforce management SaaS product by identifying behaviours that signal product value and predicting conversion likelihood.
+This project defines **Trial Activation** for a workforce management SaaS product by identifying behaviours that signal product value and evaluating their relationship with conversion likelihood.
 
-The goal is to help product teams understand:
+The goal is to help product teams:
 
-- What a **good trial** looks like
-- Which behaviours signal **high conversion potential**
-- When to **intervene during onboarding**
-- How to track activation at scale using **warehouse models**
-
-Trial users complete many activities, but not all behaviours drive conversion.
-
-This project answers:
-
-1. Which product activities indicate conversion likelihood?
-2. What set of behaviours defines **Trial Activation**?
-3. How can **activation be tracked** consistently in a data warehouse?
-4. What insights help improve onboarding and conversion rates?
+- Define what a **good trial** looks like based on meaningful product behaviours
+- Identify behaviours associated with **higher conversion potential**
+- Determine when to **intervene during onboarding** to improve engagement
+- **Track activation** consistently at scale using **warehouse-based data models**
+- Generate actionable insights to **improve onboarding and conversion performance**
 
 ## Trial Activation Definition
 
-**Trial Activation** occurs when an organisation completes key behaviours that demonstrate real product value.
+**Trial Activation** occurs when an organisation completes key behaviours hypothesised to reflect meaningful product value and early product adoption.
 
-Activation is defined as completing:
+These behaviours were defined using **product-value logic** and **customer journey reasoning**, then evaluated using:
 
-- Core Scheduling
-- Schedule Management
-- Mobile Visibility
-- Time Tracking
-- Early Activity (Feature) Breadth
-
-These behaviours were selected using:
-
-- Statistical testing
 - Behaviour frequency comparison
-- Logistic regression modelling
+- Statistical testing (chi-square, Mann–Whitney)
+- Logistic regression modelling (predictive evaluation)
 - Conversion rate segmentation
 
 Trial goals are treated as **product hypotheses**, not guaranteed conversion drivers.
@@ -124,6 +108,12 @@ Each goal represents a milestone toward activation. **Trial Activation = Complet
 | 3 | Mobile Visibility      | Loaded mobile schedule ≥ 3 times                 | 36.0%           | 22.1%                         | 1.04       |
 | 4 | Time Tracking          | Recorded ≥ 1 punch-in                            | 21.8%           | 22.8%                         | 1.07       |
 | 5 | Early Activity Breadth | ≥ 3 different features in first 7 days of trial  | 28.3%           | 22.3%                         | 1.05       |
+
+#### Goal Interpretation Caveat: Limited Predictive Evidence
+
+Goals are designed around product-value logic, reflecting key milestones in the customer journey from setup to habitual use. However, these remain working hypotheses rather than empirically validated drivers of conversion.
+
+Across statistical testing and logistic regression modelling, **no individual activity or engagement feature demonstrates meaningful predictive value** for conversion (chi-square p > 0.05; Mann–Whitney p > 0.05; logistic regression AUC ≈ 0.51, near the random baseline).
 
 ### 4. SQL Models
 
