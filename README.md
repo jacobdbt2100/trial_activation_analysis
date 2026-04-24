@@ -92,9 +92,9 @@ The raw data consist of a single table with seven attributes and 170,526 trial e
 
 ### 2. Conversion Driver Analysis
 
-#### [Fig. 2: Conversion Driver Analysis Output](https://github.com/jacobdbt2100/trial_activation_analysis/blob/main/notebooks/01_data_cleaning_and_exploration_output.png)
+#### [Fig. 2: Conversion Driver Analysis Output](https://github.com/jacobdbt2100/trial_activation_analysis/blob/main/notebooks/02_conversion_driver_analysis_output.png)
 
-<img src="https://raw.githubusercontent.com/jacobdbt2100/trial_activation_analysis/main/notebooks/01_data_cleaning_and_exploration_output.png" width="1000">
+<img src="https://raw.githubusercontent.com/jacobdbt2100/trial_activation_analysis/main/notebooks/02_conversion_driver_analysis_output.png" width="1000">
 
 ### 3. Trial Goals Defined
 
