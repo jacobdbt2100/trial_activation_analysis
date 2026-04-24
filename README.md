@@ -207,7 +207,7 @@ trial_activation_analysis/
 
 - **Use activation data to support ongoing decisions**: Build dashboards that track goal completion and activation trends over time.
 
-## How to Run This Project
+## Project Setup & Reproduction
 
 ### 1. Clone Repository
 
