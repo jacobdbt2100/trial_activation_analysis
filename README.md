@@ -97,6 +97,12 @@ This combination ensures both:
 
 <img src="https://raw.githubusercontent.com/jacobdbt2100/trial_activation_analysis/main/notebooks/02_conversion_driver_analysis_output.png" width="1000">
 
+#### Conversion Driver Caveat: Limited Predictive Evidence
+
+Goals are designed around product-value logic, reflecting key milestones in the customer journey from setup to habitual use. However, these remain working hypotheses rather than empirically validated drivers of conversion.
+
+Across statistical testing and logistic regression modelling, **no individual activity or engagement feature demonstrates meaningful predictive value** for conversion (chi-square p > 0.05; Mann–Whitney p > 0.05; logistic regression AUC ≈ 0.51, near the random baseline).
+
 ### 3. Trial Goals Defined
 
 Each goal represents a milestone toward activation. **Trial Activation = Completion of all goals**.
@@ -108,12 +114,6 @@ Each goal represents a milestone toward activation. **Trial Activation = Complet
 | 3 | Mobile Visibility      | Loaded mobile schedule ≥ 3 times                 | 36.0%           | 22.1%                         | 1.04       |
 | 4 | Time Tracking          | Recorded ≥ 1 punch-in                            | 21.8%           | 22.8%                         | 1.07       |
 | 5 | Early Activity Breadth | ≥ 3 different features in first 7 days of trial  | 28.3%           | 22.3%                         | 1.05       |
-
-#### Goal Interpretation Caveat: Limited Predictive Evidence
-
-Goals are designed around product-value logic, reflecting key milestones in the customer journey from setup to habitual use. However, these remain working hypotheses rather than empirically validated drivers of conversion.
-
-Across statistical testing and logistic regression modelling, **no individual activity or engagement feature demonstrates meaningful predictive value** for conversion (chi-square p > 0.05; Mann–Whitney p > 0.05; logistic regression AUC ≈ 0.51, near the random baseline).
 
 ### 4. SQL Models
 
