@@ -88,7 +88,7 @@ The raw data consist of a single table with seven attributes and 170,526 trial e
 
 #### [Fig. 1: Data Exploration Output](https://github.com/jacobdbt2100/trial_activation_analysis/blob/main/notebooks/01_data_cleaning_and_exploration_output.png)
 
-<img src="https://raw.githubusercontent.com/jacobdbt2100/trial_activation_analysis/main/notebooks/01_data_cleaning_and_exploration_output.png" width="1000">
+<img src="https://raw.githubusercontent.com/jacobdbt2100/trial_activation_analysis/main/notebooks/01_data_cleaning_and_exploration_output.png" width="1200">
 
 ### 2. Conversion Driver Analysis
 
@@ -111,7 +111,7 @@ This combination ensures both:
 
 #### [Fig. 2: Conversion Driver Analysis Output](https://github.com/jacobdbt2100/trial_activation_analysis/blob/main/notebooks/02_conversion_driver_analysis_output.png)
 
-<img src="https://raw.githubusercontent.com/jacobdbt2100/trial_activation_analysis/main/notebooks/02_conversion_driver_analysis_output.png" width="900">
+<img src="https://raw.githubusercontent.com/jacobdbt2100/trial_activation_analysis/main/notebooks/02_conversion_driver_analysis_output.png" width="1000">
 
 ### 3. Trial Goals Defined
 
@@ -145,10 +145,11 @@ These metrics help teams monitor:
 
 #### [Fig. 3: Product Metrics Output](https://github.com/jacobdbt2100/trial_activation_analysis/blob/main/notebooks/03_descriptive_analysis_and_product_metrics_output.png)
 
-<img src="https://raw.githubusercontent.com/jacobdbt2100/trial_activation_analysis/main/notebooks/03_descriptive_analysis_and_product_metrics_output.png" width="1000">
+<img src="https://raw.githubusercontent.com/jacobdbt2100/trial_activation_analysis/main/notebooks/03_descriptive_analysis_and_product_metrics_output.png" width="1200">
 
 ### 6. Repository Structure
 
+```text
 trial_activation_analysis/
 │
 ├── dataset/
@@ -166,13 +167,13 @@ trial_activation_analysis/
 │
 ├── models/
 │   ├── marts/
-│   │   ├── fct_trial_activation.sql            # mart: activation flag per organisation
-│   │   ├── fct_trial_goals.sql                 # mart: goal completion per organisation
-│   │   └── marts_schema.yml                    # dbt mart models tests
+│   │   ├── fct_trial_activation.sql
+│   │   ├── fct_trial_goals.sql
+│   │   └── marts_schema.yml
 │   │
 │   └── staging/
-│       ├── stg_trial_events.sql                # staging: cast, dedup, enrich raw events
-│       └── staging_schema.yml                  # dbt source + staging models tests
+│       ├── stg_trial_events.sql
+│       └── staging_schema.yml
 │
 ├── notebooks/
 │   ├── 01_data_cleaning_and_exploration.ipynb
@@ -186,6 +187,7 @@ trial_activation_analysis/
 ├── README.md
 ├── dbt_project.yml
 └── requirements.txt
+```
 
 ## Recommendations
 
