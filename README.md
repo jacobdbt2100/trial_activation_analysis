@@ -1,5 +1,5 @@
 # Trial-to-Activation Behaviour Analysis and ELT Modelling
-Product Analytics | Python | SQL | dbt
+Product Analytics | Python | SQL | dbt | PostgreSQL
 ___
 
 ## Project Objective
