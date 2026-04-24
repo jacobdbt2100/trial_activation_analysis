@@ -167,13 +167,13 @@ trial_activation_analysis/
 │
 ├── models/
 │   ├── marts/
-│   │   ├── fct_trial_activation.sql
-│   │   ├── fct_trial_goals.sql
-│   │   └── marts_schema.yml
+│   │   ├── fct_trial_activation.sql          # mart: activation flag per organisation
+│   │   ├── fct_trial_goals.sql               # mart: goal completion per organisation
+│   │   └── marts_schema.yml                  # dbt mart models tests
 │   │
-│   └── staging/
+│   └── staging/                              # staging: cast, dedup, enrich raw events
 │       ├── stg_trial_events.sql
-│       └── staging_schema.yml
+│       └── staging_schema.yml                # dbt source + staging models tests
 │
 ├── notebooks/
 │   ├── 01_data_cleaning_and_exploration.ipynb
