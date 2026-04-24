@@ -1,5 +1,5 @@
 # Trial-to-Activation Behaviour Analysis and ELT Modelling
-Product Analytics | dbt Modelling | Python | SQL
+Product Analytics | Python | dbt | SQL
 ___
 
 This project defines **Trial Activation** for a workforce management SaaS product by identifying behaviours that signal product value and predicting conversion likelihood.
