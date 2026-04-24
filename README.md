@@ -150,7 +150,7 @@ Materialized as **tables** to improve performance by storing cleaned, business-r
 
 ### 5. Descriptive Product Metrics
 
-Derived metrics include:
+Derived metrics from data models include:
 
 - Overall Conversion Rate
 - Days to Activation & Conversion
