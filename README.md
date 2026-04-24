@@ -191,37 +191,21 @@ trial_activation_analysis/
 
 ## Recommendations
 
-- **Introduce mid-trial reminders (Day 7–14)**
+- **Introduce mid-trial reminders (Day 7–14)**: Encourage organisations with low early activity to create shifts and load schedules before the trial ends.
 
-Encourage organisations with low early activity to create shifts and load schedules before the trial ends.
+- **Make shift creation a required early step**: Prioritise scheduling setup during onboarding since it is the most widely used and foundational feature.
 
-- **Make shift creation a required early step**
+- **Encourage use of multiple features early**: Prompt users to try at least 3 different features within the first 7 days to increase product exposure.
 
-Prioritise scheduling setup during onboarding since it is the most widely used and foundational feature.
+- **Promote early use of time tracking**: Guide users to complete their first punch-in/punch-out during onboarding.
 
-- **Encourage use of multiple features early**
+- **Investigate declining conversion in later cohorts**: Review onboarding flow, product changes, or user mix that may explain lower conversion rates in recent months.
 
-Prompt users to try at least 3 different features within the first 7 days to increase product exposure.
+- **Track Trial Activation as a key KPI**: Monitor activation rate alongside conversion to measure onboarding effectiveness.
 
-- **Promote early use of time tracking**
+- **Flag low-progress trialists early**: Identify organisations that fail to complete key actions and trigger targeted support.
 
-Guide users to complete their first punch-in/punch-out during onboarding.
-
-- **Investigate declining conversion in later cohorts**
-
-Review onboarding flow, product changes, or user mix that may explain lower conversion rates in recent months.
-
-- **Track Trial Activation as a key KPI**
-
-Monitor activation rate alongside conversion to measure onboarding effectiveness.
-
-- **Flag low-progress trialists early**
-
-Identify organisations that fail to complete key actions and trigger targeted support.
-
-- **Use activation data to support ongoing decisions**
-
-Build dashboards that track goal completion and activation trends over time.
+- **Use activation data to support ongoing decisions**: Build dashboards that track goal completion and activation trends over time.
 
 ## How to Run This Project
 
