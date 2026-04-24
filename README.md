@@ -126,6 +126,28 @@ Each goal represents a milestone toward activation. **Trial Activation = Complet
 | 5 | Early Activity Breadth | ≥ 3 different features in first 7 days of trial  | 28.3%           | 22.3%                         | 1.05       |
 
 ### 4. SQL Models
+
+Built using **dbt layered architecture**.
+
+#### Staging:
+Materialized as **view** to keep staging models fresh and always reflect the latest source data.
+
+- **`stg_trial_events`**: link to-------
+  - Deduplicates on `organization_id`, `activity_name`, `timestamp`
+  - Casts data types
+  - Derives additional fields `activity_module` and `days_since_trial_start`
+
+#### Marts
+Materialized as **tables** to improve performance by storing cleaned, business-ready data for faster querying.
+
+- **`fct_trial_goals`**: link to---------
+  - Grain: one row per organisation.
+  - Derives fields for **goal completion flags** and one for `goals_completed_count`
+
+- **`fct_trial_activation`**: link to--------
+  - Grain: one row per organisation.
+  - Derives `is_activated` boolean, `activation_tier` segments, and `days_from_trial_start_to_goals_and_conversion`
+
 ### 5. Descriptive Product Metrics
 
 Derived metrics include:
