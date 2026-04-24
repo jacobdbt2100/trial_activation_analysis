@@ -266,7 +266,11 @@ Python | pandas | matplotlib | seaborn | SQL | dbt | Jupyter Notebook | Git/GitH
 
 **Jacob Joshua**
 
-Data Analyst - Product & Behaviour Analytics
+Product Analyst & Analytics Engineer || SaaS & FinTech ||
+
+Growth, Retention, & Behaviour Analytics || Data Modelling ||
+
+SQL • dbt • Python • Power BI • Excel
 
 - [X(Twitter)](https://x.com/jacobdbt2100_2)
 - [LinkedIn](https://www.linkedin.com/in/jacobjoshua675/)
