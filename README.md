@@ -94,7 +94,7 @@ The raw data consist of a single table with seven attributes and 170,526 trial e
 
 #### [Fig. 2: Conversion Driver Analysis Output](https://github.com/jacobdbt2100/trial_activation_analysis/blob/main/notebooks/02_conversion_driver_analysis_output.png)
 
-<img src="https://raw.githubusercontent.com/jacobdbt2100/trial_activation_analysis/main/notebooks/02_conversion_driver_analysis_output.png" width="1000">
+<img src="https://raw.githubusercontent.com/jacobdbt2100/trial_activation_analysis/main/notebooks/02_conversion_driver_analysis_output.png" width="900">
 
 ### 3. Trial Goals Defined
 
@@ -110,6 +110,11 @@ Each goal represents a milestone toward activation. **Trial Activation = Complet
 
 ### 4. SQL Models
 ### 5. Descriptive Product Metrics
+
+#### [Fig. 3: Product Metrics Output](https://github.com/jacobdbt2100/trial_activation_analysis/blob/main/notebooks/03_descriptive_analysis_and_product_metrics_output.png)
+
+<img src="https://raw.githubusercontent.com/jacobdbt2100/trial_activation_analysis/main/notebooks/03_descriptive_analysis_and_product_metrics_output.png" width="1000">
+
 ### 6. Repo Structure
 
 
