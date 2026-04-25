@@ -132,6 +132,7 @@ Built using **dbt layered architecture**.
 Materialized as **view** to keep staging models fresh and always reflect the latest source data.
 
 - **`stg_trial_events`**:
+  - Grain: one row per event
   - Deduplicates on `organization_id`, `activity_name`, `timestamp`
   - Casts data types
   - Derives additional fields `activity_module` and `days_since_trial_start`
@@ -142,13 +143,13 @@ Materialized as **view** to keep staging models fresh and always reflect the lat
 Materialized as **tables** to improve performance by storing cleaned, business-ready data for faster querying.
 
 - **`fct_trial_goals`**:
-  - Grain: one row per organisation.
+  - Grain: one row per organisation
   - Derives fields for **goal completion flags** and one for `goals_completed_count`
 
 **See SQL model**: [fct_trial_goals.sql](https://github.com/jacobdbt2100/trial_activation_analysis/blob/main/models/marts/fct_trial_goals.sql)
 
 - **`fct_trial_activation`**:
-  - Grain: one row per organisation.
+  - Grain: one row per organisation
   - Derives `is_activated` boolean, `activation_tier` segments, and `days_from_trial_start_to_goals_and_conversion`
 
 **See SQL model**: [fct_trial_activation.sql](https://github.com/jacobdbt2100/trial_activation_analysis/blob/main/models/marts/fct_trial_activation.sql)
