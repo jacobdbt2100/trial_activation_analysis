@@ -139,7 +139,7 @@ Materialized as **view** to keep staging models fresh and always reflect the lat
 
 **See SQL model**: [stg_trial_events.sql](https://github.com/jacobdbt2100/trial_activation_analysis/blob/main/models/staging/stg_trial_events.sql)
 
-#### Marts
+#### Marts:
 Materialized as **tables** to improve performance by storing cleaned, business-ready data for faster querying.
 
 - **`fct_trial_goals`**:
