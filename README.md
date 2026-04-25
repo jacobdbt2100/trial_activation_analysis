@@ -100,6 +100,8 @@ This combination ensures both:
 - Statistical validity
 - Practical interpretability
 
+**See notebook**: [02_conversion_driver_analysis.ipynb](https://github.com/jacobdbt2100/trial_activation_analysis/blob/main/notebooks/02_conversion_driver_analysis.ipynb)
+
 #### [Fig. 2: Conversion Driver Analysis Output](https://github.com/jacobdbt2100/trial_activation_analysis/blob/main/notebooks/02_conversion_driver_analysis_output.png)
 
 <img src="https://raw.githubusercontent.com/jacobdbt2100/trial_activation_analysis/main/notebooks/02_conversion_driver_analysis_output.png" width="1000">
@@ -129,21 +131,27 @@ Built using **dbt layered architecture**.
 #### Staging:
 Materialized as **view** to keep staging models fresh and always reflect the latest source data.
 
-- **`stg_trial_events`**: [stg_trial_events.sql](https://github.com/jacobdbt2100/trial_activation_analysis/blob/main/models/staging/stg_trial_events.sql)
+- **`stg_trial_events`**:
   - Deduplicates on `organization_id`, `activity_name`, `timestamp`
   - Casts data types
   - Derives additional fields `activity_module` and `days_since_trial_start`
 
+**See SQL model**: [stg_trial_events.sql](https://github.com/jacobdbt2100/trial_activation_analysis/blob/main/models/staging/stg_trial_events.sql)
+
 #### Marts
 Materialized as **tables** to improve performance by storing cleaned, business-ready data for faster querying.
 
-- **`fct_trial_goals`**: [fct_trial_goals.sql](https://github.com/jacobdbt2100/trial_activation_analysis/blob/main/models/marts/fct_trial_goals.sql)
+- **`fct_trial_goals`**:
   - Grain: one row per organisation.
   - Derives fields for **goal completion flags** and one for `goals_completed_count`
 
-- **`fct_trial_activation`**: [fct_trial_activation.sql](https://github.com/jacobdbt2100/trial_activation_analysis/blob/main/models/marts/fct_trial_activation.sql)
+**See SQL model**: [fct_trial_goals.sql](https://github.com/jacobdbt2100/trial_activation_analysis/blob/main/models/marts/fct_trial_goals.sql)
+
+- **`fct_trial_activation`**:
   - Grain: one row per organisation.
   - Derives `is_activated` boolean, `activation_tier` segments, and `days_from_trial_start_to_goals_and_conversion`
+
+**See SQL model**: [fct_trial_activation.sql](https://github.com/jacobdbt2100/trial_activation_analysis/blob/main/models/marts/fct_trial_activation.sql)
 
 ### 5. Descriptive Product Metrics
 
@@ -161,6 +169,8 @@ These metrics help teams monitor:
 - Trial health
 - Feature effectiveness
 - Onboarding performance
+
+**See notebook**: [03_descriptive_analysis_and_product_metrics.ipynb](https://github.com/jacobdbt2100/trial_activation_analysis/blob/main/notebooks/03_descriptive_analysis_and_product_metrics.ipynb)
 
 #### [Fig. 3: Product Metrics Output](https://github.com/jacobdbt2100/trial_activation_analysis/blob/main/notebooks/03_descriptive_analysis_and_product_metrics_output.png)
 
