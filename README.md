@@ -108,11 +108,11 @@ This combination ensures both:
 
 #### Conversion Driver Caveat; Limited Predictive Evidence:
 
-Goals are designed around product-value logic, reflecting key milestones in the customer journey from setup to habitual use. However, these remain working hypotheses rather than empirically validated drivers of conversion.
-
 Across statistical testing and logistic regression modelling, **no individual activity or engagement feature demonstrates meaningful predictive value** for conversion (chi-square p > 0.05; Mann–Whitney p > 0.05; logistic regression AUC ≈ 0.51, near the random baseline).
 
 ### 3. Trial Goals Defined
+
+Goals are designed around **product-value logic**, reflecting key milestones in the customer journey from setup to habitual use. However, these remain working hypotheses rather than empirically validated drivers of conversion.
 
 Each goal represents a milestone toward activation. **Trial Activation = Completion of all goals**.
 
