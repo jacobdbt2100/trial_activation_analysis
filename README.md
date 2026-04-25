@@ -60,6 +60,13 @@ The raw data consist of a single table with seven attributes and 170,526 trial e
 ## Methodology
 
 ### 1. Data Cleaning & Exploration
+
+Data cleaning and exploratory analysis were performed in Python using Jupyter Notebook to ensure data quality and establish baseline patterns.
+
+Key results were summarised into a single visual to simplify interpretation of engagement and activity distributions.
+
+See notebook: [01_data_cleaning_and_exploration.ipynb](https://github.com/jacobdbt2100/trial_activation_analysis/blob/main/notebooks/01_data_cleaning_and_exploration.ipynb)
+
 - Raw events: **170,526**
 - After deduplication: **102,895** (**67,631** exact duplicates removed)
 - Distinct organisations: **966**
