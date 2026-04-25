@@ -61,11 +61,11 @@ The raw data consist of a single table with seven attributes and 170,526 trial e
 
 ### 1. Data Cleaning & Exploration
 
-Data cleaning and exploratory analysis were performed in Python using Jupyter Notebook to ensure data quality and establish baseline patterns.
+Data cleaning and exploratory analysis were performed in Python using Jupyter Notebook to **ensure data quality and establish baseline patterns**.
 
-Key results were summarised into a single visual to simplify interpretation of engagement and activity distributions.
+**Key results** were **summarised into a single visual** to simplify interpretation of engagement and activity distributions.
 
-See notebook: [01_data_cleaning_and_exploration.ipynb](https://github.com/jacobdbt2100/trial_activation_analysis/blob/main/notebooks/01_data_cleaning_and_exploration.ipynb)
+**See notebook**: [01_data_cleaning_and_exploration.ipynb](https://github.com/jacobdbt2100/trial_activation_analysis/blob/main/notebooks/01_data_cleaning_and_exploration.ipynb)
 
 - Raw events: **170,526**
 - After deduplication: **102,895** (**67,631** exact duplicates removed)
@@ -83,7 +83,7 @@ See notebook: [01_data_cleaning_and_exploration.ipynb](https://github.com/jacobd
 
 ### 2. Conversion Driver Analysis
 
-#### Analytical Methods Used
+#### Analytical Methods Used:
 
 Multiple methods were applied to identify behavioural drivers:
 
@@ -104,7 +104,7 @@ This combination ensures both:
 
 <img src="https://raw.githubusercontent.com/jacobdbt2100/trial_activation_analysis/main/notebooks/02_conversion_driver_analysis_output.png" width="1000">
 
-#### Conversion Driver Caveat: Limited Predictive Evidence
+#### Conversion Driver Caveat; Limited Predictive Evidence:
 
 Goals are designed around product-value logic, reflecting key milestones in the customer journey from setup to habitual use. However, these remain working hypotheses rather than empirically validated drivers of conversion.
 
