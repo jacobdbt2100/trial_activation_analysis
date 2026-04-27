@@ -273,6 +273,7 @@ Python | pandas | matplotlib | seaborn | SQL | dbt | Jupyter Notebook | Git/GitH
 ## Author
 
 **Jacob Joshua**
+
 jacobjoshua675@gmail.com
 
 - [X(Twitter)](https://x.com/jacobdbt2100_2)
