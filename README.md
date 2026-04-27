@@ -273,12 +273,7 @@ Python | pandas | matplotlib | seaborn | SQL | dbt | Jupyter Notebook | Git/GitH
 ## Author
 
 **Jacob Joshua**
-
-Product Analyst & Analytics Engineer || SaaS & FinTech ||
-
-Growth, Retention, & Behaviour Analytics || Data Modelling ||
-
-SQL • dbt • Python • Power BI • Excel
+jacobjoshua675@gmail.com
 
 - [X(Twitter)](https://x.com/jacobdbt2100_2)
 - [LinkedIn](https://www.linkedin.com/in/jacobjoshua675/)
