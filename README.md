@@ -61,11 +61,9 @@ The raw data consist of a single table with seven attributes and 170,526 trial e
 
 ### 1. Data Cleaning & Exploration
 
-Data cleaning and exploratory analysis were performed in Python using Jupyter Notebook to **ensure data quality and establish baseline patterns**.
+Data cleaning and exploratory analysis were performed in Python ([01_data_cleaning_and_exploration.ipynb](https://github.com/jacobdbt2100/trial_activation_analysis/blob/main/notebooks/01_data_cleaning_and_exploration.ipynb)) to **ensure data quality and establish baseline patterns**.
 
 **Key results** were **summarised into a single visual** to simplify interpretation of engagement and activity distributions.
-
-**See notebook**: [01_data_cleaning_and_exploration.ipynb](https://github.com/jacobdbt2100/trial_activation_analysis/blob/main/notebooks/01_data_cleaning_and_exploration.ipynb)
 
 - Raw events: **170,526**
 - After deduplication: **102,895** (**67,631** exact duplicates removed)
@@ -85,7 +83,7 @@ Data cleaning and exploratory analysis were performed in Python using Jupyter No
 
 #### Analytical Methods Used:
 
-Multiple methods were applied to identify behavioural drivers:
+Multiple methods were applied ([02_conversion_driver_analysis.ipynb](https://github.com/jacobdbt2100/trial_activation_analysis/blob/main/notebooks/02_conversion_driver_analysis.ipynb)) to identify behavioural drivers:
 
 - Exploratory Data Analysis (EDA)
 - Event frequency comparison
@@ -99,8 +97,6 @@ This combination ensures both:
 
 - Statistical validity
 - Practical interpretability
-
-**See notebook**: [02_conversion_driver_analysis.ipynb](https://github.com/jacobdbt2100/trial_activation_analysis/blob/main/notebooks/02_conversion_driver_analysis.ipynb)
 
 #### [Fig. 2: Conversion Driver Analysis Output](https://github.com/jacobdbt2100/trial_activation_analysis/blob/main/notebooks/02_conversion_driver_analysis_output.png)
 
@@ -131,32 +127,26 @@ Built using **dbt layered architecture**.
 #### Staging:
 Materialized as **view** to keep staging models fresh and always reflect the latest source data.
 
-- **`stg_trial_events`**:
+- [stg_trial_events.sql](https://github.com/jacobdbt2100/trial_activation_analysis/blob/main/models/staging/stg_trial_events.sql):
   - Grain: one row per event
   - Deduplicates on `organization_id`, `activity_name`, `timestamp`
   - Casts data types
   - Derives additional fields `activity_module` and `days_since_trial_start`
 
-**See SQL model**: [stg_trial_events.sql](https://github.com/jacobdbt2100/trial_activation_analysis/blob/main/models/staging/stg_trial_events.sql)
-
 #### Marts:
 Materialized as **tables** to improve performance by storing cleaned, business-ready data for faster querying.
 
-- **`fct_trial_goals`**:
+- [fct_trial_goals.sql](https://github.com/jacobdbt2100/trial_activation_analysis/blob/main/models/marts/fct_trial_goals.sql):
   - Grain: one row per organisation
   - Derives fields for **goal completion flags** and one for `goals_completed_count`
 
-**See SQL model**: [fct_trial_goals.sql](https://github.com/jacobdbt2100/trial_activation_analysis/blob/main/models/marts/fct_trial_goals.sql)
-
-- **`fct_trial_activation`**:
+- [fct_trial_activation.sql](https://github.com/jacobdbt2100/trial_activation_analysis/blob/main/models/marts/fct_trial_activation.sql):
   - Grain: one row per organisation
   - Derives `is_activated` boolean, `activation_tier` segments, and `days_from_trial_start_to_goals_and_conversion`
 
-**See SQL model**: [fct_trial_activation.sql](https://github.com/jacobdbt2100/trial_activation_analysis/blob/main/models/marts/fct_trial_activation.sql)
-
 ### 5. Descriptive Product Metrics
 
-Derived metrics from data models include:
+Derived metrics ([03_descriptive_analysis_and_product_metrics.ipynb](https://github.com/jacobdbt2100/trial_activation_analysis/blob/main/notebooks/03_descriptive_analysis_and_product_metrics.ipynb)) from data models include:
 
 - Overall Conversion Rate
 - Days to Activation & Conversion
@@ -170,8 +160,6 @@ These metrics help teams monitor:
 - Trial health
 - Feature effectiveness
 - Onboarding performance
-
-**See notebook**: [03_descriptive_analysis_and_product_metrics.ipynb](https://github.com/jacobdbt2100/trial_activation_analysis/blob/main/notebooks/03_descriptive_analysis_and_product_metrics.ipynb)
 
 #### [Fig. 3: Product Metrics Output](https://github.com/jacobdbt2100/trial_activation_analysis/blob/main/notebooks/03_descriptive_analysis_and_product_metrics_output.png)
 
