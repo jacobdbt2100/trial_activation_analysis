@@ -276,6 +276,5 @@ Python | pandas | matplotlib | seaborn | SQL | dbt | Jupyter Notebook | Git/GitH
 
 jacobjoshua675@gmail.com
 
-- [X(Twitter)](https://x.com/jacobdbt2100_2)
 - [LinkedIn](https://www.linkedin.com/in/jacobjoshua675/)
-- [GitHub](https://github.com/jacobdbt2100/Data-Analytics-Projects/blob/main/README.md)
+- [Portfolio Projects](https://github.com/jacobdbt2100/Data-Analytics-Projects/blob/main/README.md)
