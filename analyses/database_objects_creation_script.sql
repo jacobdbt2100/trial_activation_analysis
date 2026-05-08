@@ -13,5 +13,7 @@ CREATE TABLE source_schema_trial_to_conversion_dev.trial_events (
     TRIAL_END			TIMESTAMP
 );
 
+--===============================================
+
 -- inspect table
 select * from source_schema_trial_to_conversion_dev.trial_events limit 3;
