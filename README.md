@@ -1,4 +1,4 @@
-# Trial-to-Activation Behaviour Analysis and ELT Modelling
+# Trial Activation and Conversion Behaviour Analysis with ELT Modelling
 Product Analytics | Python | SQL | dbt | PostgreSQL
 ___
 
