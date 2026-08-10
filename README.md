@@ -75,9 +75,9 @@ Data cleaning and exploratory analysis were performed in Python ([01_data_cleani
 - Activities Adoption Rate: Activites within the **Scheduling** module are most commonly adopted with **6 out of the top 10**.
 - Activities Usage Volume: The **Scheduling** module still tops with **5 out of the top 10** total usage count.
 
-#### [Fig. 1: Data Exploration Output](https://github.com/jacobdbt2100/trial_activation_analysis/blob/main/notebooks/01_data_cleaning_and_exploration_output.png)
-
 <img src="https://raw.githubusercontent.com/jacobdbt2100/trial_activation_analysis/main/notebooks/01_data_cleaning_and_exploration_output.png" width="1200">
+
+**Fig. 1: data cleaning & exploration output**
 
 ### 2. Conversion Driver Analysis
 
@@ -98,9 +98,9 @@ This combination ensures both:
 - Statistical validity
 - Practical interpretability
 
-#### [Fig. 2: Conversion Driver Analysis Output](https://github.com/jacobdbt2100/trial_activation_analysis/blob/main/notebooks/02_conversion_driver_analysis_output.png)
-
 <img src="https://raw.githubusercontent.com/jacobdbt2100/trial_activation_analysis/main/notebooks/02_conversion_driver_analysis_output.png" width="1000">
+
+**Fig. 2: conversion driver analysis output**
 
 #### Conversion Driver Caveat; Limited Predictive Evidence:
 
@@ -161,9 +161,9 @@ These metrics help teams monitor:
 - Feature effectiveness
 - Onboarding performance
 
-#### [Fig. 3: Product Metrics Output](https://github.com/jacobdbt2100/trial_activation_analysis/blob/main/notebooks/03_descriptive_analysis_and_product_metrics_output.png)
-
 <img src="https://raw.githubusercontent.com/jacobdbt2100/trial_activation_analysis/main/notebooks/03_descriptive_analysis_and_product_metrics_output.png" width="1200">
+
+**Fig. 3: descriptive analysis & product metrics output**
 
 ## Recommendations
 
